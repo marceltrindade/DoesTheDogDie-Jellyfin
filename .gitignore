@@ -77,3 +77,6 @@ project.lock.json
 # Temporary files
 *.tmp
 *.temp
+
+# External templates or submodules
+jellyfin-plugin-template/
