@@ -1,0 +1,79 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+*.user
+*.suo
+*.sln.docstates
+
+# Visual Studio 2015+ cache/options
+.vs/
+*.vs/
+
+# Rider
+.idea/
+*.DotSettings.user
+
+# CodeRush
+.cr/
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+
+# JetBrains ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings
+
+# TeamCity
+_TeamCity*
+
+# DotCover
+*.dotCover
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# FastTest related
+**/FastTest.dSYM/
+
+# MacOS
+.DS_Store
+
+# .NET Core
+project.lock.json
+*.db
+
+# VS Code
+.vscode/
+
+# Rider
+*.sln.iml
+
+# Temporary files
+*.tmp
+*.temp

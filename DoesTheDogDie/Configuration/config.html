@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Does The Dog Die Integration</title>
+</head>
+<body>
+    <div class="configPage">
+        <h1>Does The Dog Die Integration</h1>
+        <form class="pluginConfigurationForm">
+            <div class="configSection">
+                <h2>API Key</h2>
+                <p>Get your API key from <a href="https://www.doesthedogdie.com/keys" target="_blank">doesthedogdie.com</a></p>
+                <div class="inputContainer">
+                    <input type="text" id="txtApiKey" name="txtApiKey" class="textInput" />
+                </div>
+            </div>
+            <div class="configSection">
+                <h2>Triggers</h2>
+                <p>Enter a list of triggers to block, one per line.</p>
+                <div class="inputContainer">
+                    <textarea id="txtTriggers" name="txtTriggers" rows="10" class="textarea"></textarea>
+                </div>
+            </div>
+            <br />
+            <button type="submit" class="button-submit">Save</button>
+        </form>
+    </div>
+
+    <script>
+        const pluginId = "0b881525-a8f2-416b-9b3b-10ab164cd3c8";
+
+        function loadConfig() {
+            ApiClient.getPluginConfiguration(pluginId).then(function (config) {
+                document.getElementById('txtApiKey').value = config.ApiKey || '';
+                document.getElementById('txtTriggers').value = config.Triggers || '';
+            });
+        }
+
+        function saveConfig(form) {
+            ApiClient.getPluginConfiguration(pluginId).then(function (config) {
+                config.ApiKey = form.querySelector('#txtApiKey').value;
+                config.Triggers = form.querySelector('#txtTriggers').value;
+                ApiClient.updatePluginConfiguration(pluginId, config).then(function (result) {
+                    Dashboard.alert({
+                        message: 'Configuration saved!',
+                        type: 'success'
+                    });
+                });
+            });
+            return false; // Prevent default form submission
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadConfig();
+        });
+
+        document.querySelector('.pluginConfigurationForm').addEventListener('submit', function () {
+            saveConfig(this);
+        });
+    </script>
+</body>
+</html>
