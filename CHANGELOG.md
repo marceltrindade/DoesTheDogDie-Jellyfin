@@ -19,6 +19,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Implementation of IHasWebPages interface for proper configuration page integration.
 - Embedded resource configuration for the HTML configuration page.
 - Build script to create release packages.
+- Contribution guidelines (CONTRIBUTING.md).
+- Plugin icon (poster.png) for Jellyfin plugin repository.
+- Detailed documentation for publishing releases and submitting to official Jellyfin plugin repository.
 
 ## [1.0.0] - 2025-09-03
 
