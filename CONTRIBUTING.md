@@ -61,4 +61,85 @@ This section lists the labels we use to help organize and identify issues and pu
 - `good first issue`: Good for newcomers
 - `help wanted`: Extra attention is needed
 
+## Publishing New Releases
+
+To publish a new release of the plugin, follow these steps:
+
+1. **Update version numbers**:
+   - Update the version in `DoesTheDogDie/meta.json`
+   - Update the version in `CHANGELOG.md`
+
+2. **Commit and push changes**:
+   ```bash
+   git add DoesTheDogDie/meta.json CHANGELOG.md
+   git commit -m "Bump version to X.X.X"
+   git push
+   ```
+
+3. **Create and push a new tag**:
+   ```bash
+   git tag -a vX.X.X -m "Release version X.X.X"
+   git push origin vX.X.X
+   ```
+
+4. **Build the release package**:
+   ```bash
+   chmod +x build.sh
+   ./build.sh
+   ```
+
+5. **Create a GitHub Release**:
+   - Go to https://github.com/marceltrindade/DoesTheDogDie-Jellyfin/releases
+   - Click "Draft a new release"
+   - Select the new tag
+   - Add release notes from the CHANGELOG
+   - Upload the package from `releases/DoesTheDogDie_X.X.X.tar.gz`
+   - Publish the release
+
+## Submitting to Official Jellyfin Plugin Repository
+
+To add this plugin to the official Jellyfin plugin repository:
+
+1. **Prepare the plugin**:
+   - Ensure the code is stable and well-documented
+   - Verify all metadata is correct in `meta.json`
+   - Confirm the plugin works as expected
+
+2. **Create a plugin icon**:
+   - Create a 512x512 PNG image
+   - Name it `poster.png`
+   - Add it to the repository
+
+3. **Generate package checksum**:
+   ```bash
+   sha256sum releases/DoesTheDogDie_X.X.X.tar.gz
+   ```
+
+4. **Fork the manifest repository**:
+   - Go to https://github.com/jellyfin/jellyfin-plugin-manifest
+   - Click "Fork"
+
+5. **Clone your fork**:
+   ```bash
+   git clone https://github.com/marceltrindade/jellyfin-plugin-manifest.git
+   cd jellyfin-plugin-manifest
+   ```
+
+6. **Add the plugin to the manifest**:
+   - Edit the appropriate manifest file (usually `manifest.json`)
+   - Add an entry with the plugin details
+
+7. **Commit and push**:
+   ```bash
+   git add manifest.json
+   git commit -m "Add DoesTheDogDie plugin"
+   git push
+   ```
+
+8. **Create a Pull Request**:
+   - Go to your fork on GitHub
+   - Click "New Pull Request"
+   - Fill in the required information
+   - Submit the PR
+
 Thank you for reading and happy coding!
