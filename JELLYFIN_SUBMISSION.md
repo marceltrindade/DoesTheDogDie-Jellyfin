@@ -14,21 +14,15 @@ Este documento contém todas as informações necessárias para submeter o plugi
 
 ## Informações da Versão
 
-- **Versão**: 1.0.1
+- **Versão**: 1.0.2
 - **Changelog**: 
-  - Plugin not appearing in Jellyfin due to missing meta.json file and incorrect implementation of IHasWebPages interface.
-  - Configuration page not properly embedded as a resource in the plugin assembly.
-  - Build script updated to create proper release packages with tar.gz format.
-  - Added meta.json file with plugin metadata for Jellyfin recognition.
-  - Implementation of IHasWebPages interface for proper configuration page integration.
-  - Embedded resource configuration for the HTML configuration page.
-  - Build script to create release packages.
-  - Contribution guidelines (CONTRIBUTING.md).
-  - Plugin icon (poster.png) for Jellyfin plugin repository.
-  - Detailed documentation for publishing releases and submitting to official Jellyfin plugin repository.
+  - Section in README.md explaining why the plugin was created
+  - JELLYFIN_SUBMISSION.md with detailed instructions for submitting to official Jellyfin plugin repository
+  - Plugin icon (poster.png) in PNG format for Jellyfin plugin repository
+  - Enhanced documentation and contribution guidelines
 - **Target ABI**: 10.9.0.0
-- **URL de Download**: https://github.com/marceltrindade/DoesTheDogDie-Jellyfin/releases/download/v1.0.1/DoesTheDogDie_1.0.1.tar.gz
-- **Checksum (SHA256)**: b4c7af925d44c0b840cb418eb9f69ba5a8ca7a76040ed8027225fa895e6d669e
+- **URL de Download**: https://github.com/marceltrindade/DoesTheDogDie-Jellyfin/releases/download/v1.0.2/DoesTheDogDie_1.0.2.tar.gz
+- **Checksum (SHA256)**: 41a8f1a860782e9f32836ee47a922b08b376f8a7dba7da7e78f68099a655a568
 - **Timestamp**: 2025-09-04T00:00:00Z
 - **URL da Imagem**: https://raw.githubusercontent.com/marceltrindade/DoesTheDogDie-Jellyfin/main/DoesTheDogDie/poster.png
 
@@ -45,11 +39,11 @@ Este documento contém todas as informações necessárias para submeter o plugi
   "imageUrl": "https://raw.githubusercontent.com/marceltrindade/DoesTheDogDie-Jellyfin/main/DoesTheDogDie/poster.png",
   "versions": [
     {
-      "version": "1.0.1",
-      "changelog": "Plugin not appearing in Jellyfin due to missing meta.json file and incorrect implementation of IHasWebPages interface. Configuration page not properly embedded as a resource in the plugin assembly. Build script updated to create proper release packages with tar.gz format. Added meta.json file with plugin metadata for Jellyfin recognition. Implementation of IHasWebPages interface for proper configuration page integration. Embedded resource configuration for the HTML configuration page. Build script to create release packages. Contribution guidelines (CONTRIBUTING.md). Plugin icon (poster.png) for Jellyfin plugin repository. Detailed documentation for publishing releases and submitting to official Jellyfin plugin repository.",
+      "version": "1.0.2",
+      "changelog": "Section in README.md explaining why the plugin was created. JELLYFIN_SUBMISSION.md with detailed instructions for submitting to official Jellyfin plugin repository. Plugin icon (poster.png) in PNG format for Jellyfin plugin repository. Enhanced documentation and contribution guidelines.",
       "targetAbi": "10.9.0.0",
-      "sourceUrl": "https://github.com/marceltrindade/DoesTheDogDie-Jellyfin/releases/download/v1.0.1/DoesTheDogDie_1.0.1.tar.gz",
-      "checksum": "b4c7af925d44c0b840cb418eb9f69ba5a8ca7a76040ed8027225fa895e6d669e",
+      "sourceUrl": "https://github.com/marceltrindade/DoesTheDogDie-Jellyfin/releases/download/v1.0.2/DoesTheDogDie_1.0.2.tar.gz",
+      "checksum": "41a8f1a860782e9f32836ee47a922b08b376f8a7dba7da7e78f68099a655a568",
       "timestamp": "2025-09-04T00:00:00Z"
     }
   ]
