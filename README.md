@@ -1,7 +1,7 @@
 # Jellyfin Plugin: Does The Dog Die? Integration
 
-[![GitHub](https://img.shields.io/github/license/your_username/jellyfin-plugin-ddtd-integration)](https://github.com/your_username/jellyfin-plugin-ddtd-integration/blob/main/LICENSE)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/your_username/jellyfin-plugin-ddtd-integration)](https://github.com/your_username/jellyfin-plugin-ddtd-integration/releases)
+[![GitHub](https://img.shields.io/github/license/marceltrindade/DoesTheDogDie-Jellyfin)](https://github.com/marceltrindade/DoesTheDogDie-Jellyfin/blob/main/LICENSE)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/marceltrindade/DoesTheDogDie-Jellyfin)](https://github.com/marceltrindade/DoesTheDogDie-Jellyfin/releases)
 
 This plugin integrates [Does The Dog Die?](https://www.doesthedogdie.com/) (DDD) into your Jellyfin media server. It automatically scans your movie library, queries the DDD API for content warnings (triggers), and applies a tag (`DTDD-Bloqueado`) to movies that match user-defined sensitive topics. This allows you to use Jellyfin's Parental Control features to hide these movies from specific user profiles.
 

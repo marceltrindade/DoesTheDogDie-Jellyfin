@@ -6,6 +6,6 @@
   "name": "Does the Dog Die Integration",
   "overview": "Applies tags to movies with content triggers from Does The Dog Die? for use with parental controls.",
   "owner": "Marcel",
-  "projectUrl": "https://github.com/your_username/jellyfin-plugin-ddtd-integration",
+  "projectUrl": "https://github.com/marceltrindade/DoesTheDogDie-Jellyfin",
   "version": "1.0.1"
 }
