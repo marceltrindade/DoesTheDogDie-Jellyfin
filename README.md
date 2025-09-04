@@ -5,6 +5,42 @@
 
 This plugin integrates [Does The Dog Die?](https://www.doesthedogdie.com/) (DDD) into your Jellyfin media server. It automatically scans your movie library, queries the DDD API for content warnings (triggers), and applies a tag (`DTDD-Bloqueado`) to movies that match user-defined sensitive topics. This allows you to use Jellyfin's Parental Control features to hide these movies from specific user profiles.
 
+## Why I Created This Plugin
+
+As a parent, I've always been concerned about the content my children have access to at home. While Jellyfin is an excellent solution for managing our home media library, there was a gap in automated tools for filtering content with sensitive triggers that could be disturbing for children or people recovering from trauma.
+
+I discovered [Does The Dog Die?](https://www.doesthedogdie.com/) while researching information about how to handle specific scenes in movies that could affect my family. The site offers an impressive database of "triggers" for movies and TV shows, including:
+
+- Violence
+- Sexual assault
+- Animal cruelty
+- Suicide themes
+- Specific phobias
+- And many others
+
+Although Jellyfin has an excellent parental control system, it relies on manual metadata and tagging to filter content. This means someone needs to manually review each movie and apply the appropriate tags. With a growing media library, this becomes impractical.
+
+I identified that Does The Dog Die? has an API that could be used to automate this process. The idea was to create a plugin that:
+
+1. Automatically scans your Jellyfin movie library
+2. Queries the Does The Dog Die? API for each movie (using the IMDb ID)
+3. Identifies user-configurable triggers
+4. Automatically applies tags to movies that contain those triggers
+5. Seamlessly integrates with Jellyfin's existing parental control system
+
+By making this plugin open source, I hope to benefit:
+
+1. **Families** who want to filter sensitive content for children
+2. **People in recovery** from trauma who need to avoid certain triggers
+3. **Individuals with specific phobias** who want to avoid disturbing content
+4. **The Jellyfin community** as a whole, expanding the ecosystem's capabilities
+
+This project also represents my contribution to the open source movement. Jellyfin is an excellent example of what can be achieved with collaboratively developed quality software. By creating this plugin, I hope to:
+
+1. Demonstrate how easy it is to extend Jellyfin's functionality
+2. Encourage other developers to create their own plugins
+3. Improve the Jellyfin experience for users with specific content filtering needs
+
 ## Features
 
 - Automatically scans your Jellyfin movie library.
@@ -24,7 +60,7 @@ This plugin integrates [Does The Dog Die?](https://www.doesthedogdie.com/) (DDD)
 1. Download the latest `.tar.gz` file from the [Releases](https://github.com/your_username/jellyfin-plugin-ddtd-integration/releases) page.
 2. On your Jellyfin server, navigate to the plugins directory. This is typically located at:
     - **Linux/macOS**: `/var/lib/jellyfin/plugins/` or `~/.local/share/jellyfin/plugins/`
-    - **Windows**: `C:\ProgramData\Jellyfin\Server\plugins\`
+    - **Windows**: `C:\ProgramData\Jellyfin\Server\plugins`
 3. Create a new folder named `DoesTheDogDie` inside the plugins directory.
 4. Extract the contents of the downloaded `.tar.gz` file into this new folder.
 5. Restart your Jellyfin server.
