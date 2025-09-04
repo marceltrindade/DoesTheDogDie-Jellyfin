@@ -21,12 +21,12 @@ This plugin integrates [Does The Dog Die?](https://www.doesthedogdie.com/) (DDD)
 
 ## Installation
 
-1. Download the latest `.dll` file from the [Releases](https://github.com/your_username/jellyfin-plugin-ddtd-integration/releases) page.
+1. Download the latest `.tar.gz` file from the [Releases](https://github.com/your_username/jellyfin-plugin-ddtd-integration/releases) page.
 2. On your Jellyfin server, navigate to the plugins directory. This is typically located at:
     - **Linux/macOS**: `/var/lib/jellyfin/plugins/` or `~/.local/share/jellyfin/plugins/`
     - **Windows**: `C:\ProgramData\Jellyfin\Server\plugins\`
 3. Create a new folder named `DoesTheDogDie` inside the plugins directory.
-4. Place the downloaded `.dll` file inside this new folder.
+4. Extract the contents of the downloaded `.tar.gz` file into this new folder.
 5. Restart your Jellyfin server.
 6. The plugin should now appear in your Jellyfin dashboard under `Plugins`.
 
@@ -76,7 +76,15 @@ This plugin is built using .NET 8.0.
 3. Run `dotnet build` to build the project.
 4. Run `dotnet publish -c Release -o bin` to create a release build.
 
-The compiled `.dll` file will be located in the `bin` directory.
+The compiled files will be located in the `bin` directory.
+
+### Creating a Release Package
+
+A build script is included to create a release package:
+
+1. Make sure you have `tar` installed on your system.
+2. Run `./build.sh` from the project root directory.
+3. The release package will be created in the `releases` directory.
 
 ### Contributing
 

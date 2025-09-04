@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net.Http;
 using DoesTheDogDie.ScheduledTasks;
 using MediaBrowser.Common.Configuration;
@@ -13,7 +14,7 @@ using Microsoft.Extensions.Logging;
 
 namespace DoesTheDogDie
 {
-    public class Plugin : BasePlugin<PluginConfiguration>
+    public class Plugin : BasePlugin<PluginConfiguration>, IHasWebPages
     {
         private readonly ILibraryManager _libraryManager;
         private readonly IHttpClientFactory _httpClientFactory;
@@ -44,6 +45,18 @@ namespace DoesTheDogDie
             return new[]
             {
                 new ScanLibraryTask(_libraryManager, _httpClientFactory, _scanTaskLogger)
+            };
+        }
+
+        public IEnumerable<PluginPageInfo> GetPages()
+        {
+            return new[]
+            {
+                new PluginPageInfo
+                {
+                    Name = Name,
+                    EmbeddedResourcePath = string.Format(CultureInfo.InvariantCulture, "{0}.Configuration.config.html", GetType().Namespace)
+                }
             };
         }
     }

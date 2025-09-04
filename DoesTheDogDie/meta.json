@@ -1,0 +1,11 @@
+{
+  "category": "General",
+  "className": "DoesTheDogDie.Plugin",
+  "description": "Integrates Does The Dog Die? content warnings into Jellyfin for parental control filtering.",
+  "guid": "0b881525-a8f2-416b-9b3b-10ab164cd3c8",
+  "name": "Does the Dog Die Integration",
+  "overview": "Applies tags to movies with content triggers from Does The Dog Die? for use with parental controls.",
+  "owner": "Marcel",
+  "projectUrl": "https://github.com/your_username/jellyfin-plugin-ddtd-integration",
+  "version": "1.0.1"
+}

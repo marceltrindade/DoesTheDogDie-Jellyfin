@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2025-09-04
+
+### Fixed
+
+- Plugin not appearing in Jellyfin due to missing meta.json file and incorrect implementation of IHasWebPages interface.
+- Configuration page not properly embedded as a resource in the plugin assembly.
+- Build script updated to create proper release packages with tar.gz format.
+
+### Added
+
+- meta.json file with plugin metadata for Jellyfin recognition.
+- Implementation of IHasWebPages interface for proper configuration page integration.
+- Embedded resource configuration for the HTML configuration page.
+- Build script to create release packages.
+
 ## [1.0.0] - 2025-09-03
 
 ### Added
